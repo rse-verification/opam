@@ -12,7 +12,7 @@ patches: [
 install: [
   ["cp" "tri" "%{bin}%/tri"]
   ["cp" "tri-pp" "%{bin}%/tri-pp"]
-  ["cp" "target/scala-2.11/TriCera-assembly-0.3.1.jar" "%{lib}%/TriCera-assembly-0.3.1.jar"]
+  ["cp" "target/scala-2.*/TriCera-assembly-*.jar" "%{lib}%/%{name}%/"]
 ]
 
 depends: [
