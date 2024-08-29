@@ -1,3 +1,4 @@
 opam-version: "2.0"
 browse: "https://github.com/rse-verification/opam"
 upstream: "https://github.com/rse-verification/opam/tree/master"
+stamp: "7b98dd6f5ff3a2d0cebee5ef4f268ef98d915410"
