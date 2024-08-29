@@ -2,6 +2,14 @@
 
 This repository contains [opam](https://opam.ocaml.org) package metadata.
 
+## Activating the repo
+
+To activate the repository and enable installing its packages:
+
+```shell
+opam repo add rse-verification https://rse-verification.github.io/opam
+```
+
 ## License
 
 All the metadata contained in this repository are licensed under the
