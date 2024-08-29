@@ -1,0 +1,26 @@
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+authors: "Philipp Ruemmer"
+homepage: "https://github.com/uuverifiers/tricera"
+bug-reports: "https://github.com/uuverifiers/tricera/issues"
+license: "BSD-3-Clause"
+dev-repo: "git+https://github.com/uuverifiers/tricera.git"
+patches: [
+  "tri.patch"
+]
+
+install: [
+  ["cp" "tri" "%{bin}%/tri"]
+  ["cp" "tri-pp" "%{bin}%/tri-pp"]
+  ["cp" "target/scala-2.11/TriCera-assembly-0.3.1.jar" "%{lib}%/TriCera-assembly-0.3.1.jar"]
+]
+
+depends: [
+  "conf-openjdk"
+]
+synopsis: "Model checker for C programs"
+
+url {
+  src: "https://github.com/uuverifiers/tricera/releases/download/v0.3.1/tricera-0.3.1-bin.zip"
+  checksum: "sha512=45d840c87e4a6d26f13a65ada466fbb2c151856883a740fcb92c3b13eb5210727b56f4202b8764c5ecb9e8a12c33f5d621ed54a08c1f4a149c581930134599df"
+}

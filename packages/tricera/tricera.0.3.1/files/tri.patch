@@ -1,0 +1,16 @@
+diff --git a/tri b/tri
+index 8e59818..816d6fe 100755
+--- a/tri
++++ b/tri
+@@ -10,6 +10,10 @@ fi
+ 
+ BASEDIR=`dirname $($pathCmd $0)`
+ 
+-. $BASEDIR/triEnv
++LIBDIR=$BASEDIR/../lib/tricera
++
++JAVA_OPTS="-Xmx2024m -Xss20000k";
++
++LAZABS_CMD="java ${JAVA_OPTS} -cp ${LIBDIR}/TriCera-assembly*.jar"
+ 
+ exec $LAZABS_CMD tricera.Main "$@"
