@@ -6,7 +6,7 @@ bug-reports: "https://github.com/rse-verification/auto-deduct-toolchain/issues"
 authors: ["The Autodeduct development team"]
 license: "GPL-2.0-or-later"
 depends: [
-  "frama-c" {= "28.1"}
+  "frama-c" {= "29.0"}
   "frama-c-isp" {= "dev"}
   "frama-c-saida" {= "dev"}
   "tricera" {= "0.3.1"}
