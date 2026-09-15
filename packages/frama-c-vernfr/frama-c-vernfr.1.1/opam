@@ -1,0 +1,40 @@
+opam-version: "2.0"
+synopsis: "Frama-C plugin for verification on non-functional contracts"
+description: """
+This plugin for the Frama-C platform allows verification of
+non-functional contracts, including properties on control flow and data flow."""
+maintainer: ["Jesper Amilon"]
+authors: ["The VerNFR development team"]
+license: "GPL-2.0-or-later"
+homepage: "https://github.com/rse-verification/vernfr"
+bug-reports: "https://github.com/rse-verification/vernfr/issues"
+depends: [
+  "dune" {>= "3.13"}
+  "ocaml" {>= "5.4"}
+  "frama-c" {>= "33" & < "34"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+dev-repo: "git+https://github.com/rse-verification/vernfr.git"
+url {
+  src:
+    "https://github.com/rse-verification/VerNFR/archive/refs/tags/v1.1.tar.gz"
+  checksum: [
+    "sha512=b76d40b19caf9eda27d9badd07a627b7599c890a42f5e1bd65d345caecc09ea89856cef7a6fc4902511834fa6cdc066cb9e4cc9d64f58de4700ad025ed62be81"
+  ]
+}

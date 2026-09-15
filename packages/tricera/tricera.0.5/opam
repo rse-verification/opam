@@ -1,0 +1,20 @@
+opam-version: "2.0"
+maintainer: "palmskog@gmail.com"
+authors: ["Zafer Esen" "Philipp Ruemmer"]
+homepage: "https://github.com/uuverifiers/tricera"
+bug-reports: "https://github.com/uuverifiers/tricera/issues"
+license: "BSD-3-Clause"
+dev-repo: "git+https://github.com/uuverifiers/tricera.git"
+
+install: [
+  ["cp" "target/native-image/TriCera" "%{bin}%/tri"]
+  ["cp" "tri-pp" "%{bin}%/tri-pp"]
+]
+synopsis: "Model checker for C programs"
+url {
+  src:
+    "https://github.com/uuverifiers/tricera/releases/download/v0.5/tricera-0.5-linux-arm64.zip"
+  checksum: [
+    "sha512=84f5df468fec785258074928e3ff4a582161355c821a88fbdc204695a35320408f2b4fae45913e18e9c2062bc081251d53da23db7f9eaba30c1663fefe110e5d"
+  ]
+}
